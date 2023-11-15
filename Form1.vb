@@ -11,10 +11,15 @@ Public Class Form1
 
 
         For x = i To (i + CInt(TextBox2.Text))
-            Dim st As String
+            Dim st, texto As String
+            Dim caracter As Char
+
             st = inicio + x.ToString()
             TextBox3.Text = inicio + x.ToString()
-            escribir(st)
+            caracter = CalcularDigitoVerificador(st)
+            texto = st + "-" + caracter
+
+            escribir(texto)
         Next
 
     End Sub
